@@ -506,6 +506,14 @@ func RedString(format string, a ...interface{}) string { return colorString(form
 // foreground.
 func GreenString(format string, a ...interface{}) string { return colorString(format, FgGreen, a...) }
 
+// BoldString is a convenient helper function to return a bold string
+func BoldString(format string, a ...interface{}) string { return colorString(format, Bold, a...) }
+
+// UnderlineString is a convenient helper function to return a underline string
+func UnderlineString(format string, a ...interface{}) string {
+	return colorString(format, Underline, a...)
+}
+
 // YellowString is a convenient helper function to return a string with yellow
 // foreground.
 func YellowString(format string, a ...interface{}) string { return colorString(format, FgYellow, a...) }
